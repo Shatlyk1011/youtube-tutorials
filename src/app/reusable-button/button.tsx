@@ -16,29 +16,31 @@ const buttonSizes = {
 }
 
 type CommonProps = {
-  variant?: keyof typeof buttonVariants;
-  size?: keyof typeof buttonSizes;
-  classes?: string;
-  children: ReactNode;
-};
+  variant?: keyof typeof buttonVariants
+  size?: keyof typeof buttonSizes
+  classes?: string
+  children: ReactNode
+}
 
 type ButtonProps = {
-  element?: "button";
-} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className"> & CommonProps;
+  element?: "button"
+} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className"> &
+  CommonProps
 
 type AnchorProps = {
-  element: "a";
-  href: string;                // <-- required when using 'a'
-  isExternal?: boolean;
-} & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "className"> & CommonProps;
+  element: "a"
+  href: string // <-- required when using 'a'
+  isExternal?: boolean
+} & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "className"> &
+  CommonProps
 
-type Props = ButtonProps | AnchorProps;
+type Props = ButtonProps | AnchorProps
 
 const ContentWrapper = ({ children }: { children: ReactNode }) => (
   <span className="relative inline-block group-hover/link:underline group-hover/link:underline-offset-4">
     {children}
   </span>
-);
+)
 
 const Button: FC<Props> = ({ variant = "primary", size = "lg", classes, element, children, ...rest }) => {
   const className = cn(
@@ -57,9 +59,7 @@ const Button: FC<Props> = ({ variant = "primary", size = "lg", classes, element,
         target={isExternal ? "_blank" : undefined}
         rel={isExternal ? "noopener noreferrer" : undefined}
       >
-        <ContentWrapper>
-          {children}
-        </ContentWrapper>
+        <ContentWrapper>{children}</ContentWrapper>
       </a>
     )
   }
@@ -68,9 +68,7 @@ const Button: FC<Props> = ({ variant = "primary", size = "lg", classes, element,
   const buttonProps = rest as ButtonProps
   return (
     <button {...buttonProps} type="button" className={className}>
-      <ContentWrapper>
-        {children}
-      </ContentWrapper>
+      <ContentWrapper>{children}</ContentWrapper>
     </button>
   )
 }
