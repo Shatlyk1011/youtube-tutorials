@@ -16,10 +16,10 @@ const buttonSizes = {
 }
 
 type CommonProps = {
+  children: ReactNode
   variant?: keyof typeof buttonVariants
   size?: keyof typeof buttonSizes
   classes?: string
-  children: ReactNode
 }
 
 type ButtonProps = {
