@@ -59,10 +59,8 @@ export default function ReusableButton() {
             </div>
           </Button>
 
-          <Button classes="bg-transparent" size="md">
-            <div className="flex items-center gap-2.5 leading-[1.4]">
-              <DemoIcon />
-            </div>
+          <Button classes="bg-transparent hover:bg-white/10 p-2 rounded-md" size="md">
+            <DemoIcon />
           </Button>
         </div>
         <div className="flex gap-5">
