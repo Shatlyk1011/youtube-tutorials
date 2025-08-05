@@ -34,6 +34,7 @@ type AnchorProps = {
 } & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "className"> &
   CommonProps
 
+// Polymorphism
 type Props = ButtonProps | AnchorProps
 
 const ContentWrapper = ({ children }: { children: ReactNode }) => (

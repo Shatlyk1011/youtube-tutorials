@@ -1,4 +1,5 @@
 import type { FC, SVGProps } from "react"
+
 import Button from "./button"
 
 const DemoIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
@@ -14,74 +15,72 @@ const DemoIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
 
 export default function ReusableButton() {
   return (
-    <>
-      <section className="flex min-h-svh w-full flex-col items-center justify-start">
-        <h1 className="mb-10 inline-block text-2xl font-semibold tracking-tight">
-          Reusable Button Component in action
-        </h1>
-        <div className="flex flex-col items-start gap-5">
-          <div className="flex gap-5">
-            <Button variant="primary">Primary lg</Button>
-            <Button variant="secondary">Secondary lg</Button>
-            <Button variant="outline">Outline lg</Button>
-            <Button variant="link" size="lg">
-              Underline lg
-            </Button>
-          </div>
-
-          <div className="flex gap-5">
-            <Button variant="primary" size="md">
-              Primary md
-            </Button>
-            <Button variant="secondary" size="md">
-              Secondary md
-            </Button>
-            <Button variant="outline" size="md">
-              Outline md
-            </Button>
-            <Button variant="link" size="md">
-              Underline md
-            </Button>
-          </div>
-
-          <div className="flex gap-5">
-            <Button variant="outline" size="md">
-              <div className="flex items-center gap-2.5 leading-[1.4]">
-                <DemoIcon />
-                Left icon
-              </div>
-            </Button>
-
-            <Button variant="outline" size="md">
-              <div className="flex items-center gap-2.5 leading-[1.4]">
-                Right icon
-                <DemoIcon />
-              </div>
-            </Button>
-
-            <Button classes="bg-transparent" size="md">
-              <div className="flex items-center gap-2.5 leading-[1.4]">
-                <DemoIcon />
-              </div>
-            </Button>
-          </div>
-          <div className="flex gap-5">
-            <Button variant="link" element="a" href="https://www.youtube.com/@devbyshat" size="md">
-              Link
-            </Button>
-
-            <Button variant="link" element="a" href="https://www.github.com/shatlyk1011" isExternal size="md">
-              <div className="flex items-center gap-2.5 leading-[1.4]">
-                <DemoIcon className="h-4 w-4" />
-                External
-              </div>
-            </Button>
-            <Button classes="bg-pink-500 hover:bg-pink-600 px-4 py-2 text-sm trackin-wide rounded-full" size="md">
-              With Custom Styles
-            </Button>
-          </div>
+    <section className="flex min-h-svh w-full flex-col items-center justify-start">
+      <h1 className="mb-10 inline-block text-2xl font-semibold tracking-tight">
+        Reusable Button Component in action
+      </h1>
+      <div className="flex flex-col items-start gap-5">
+        <div className="flex gap-5">
+          <Button variant="primary">Primary lg</Button>
+          <Button variant="secondary">Secondary lg</Button>
+          <Button variant="outline">Outline lg</Button>
+          <Button variant="link" size="lg">
+            Underline lg
+          </Button>
         </div>
-      </section>
-    </>
+
+        <div className="flex gap-5">
+          <Button variant="primary" size="md">
+            Primary md
+          </Button>
+          <Button variant="secondary" size="md">
+            Secondary md
+          </Button>
+          <Button variant="outline" size="md">
+            Outline md
+          </Button>
+          <Button variant="link" size="md">
+            Underline md
+          </Button>
+        </div>
+
+        <div className="flex gap-5">
+          <Button variant="outline" size="md">
+            <div className="flex items-center gap-2.5 leading-[1.4]">
+              <DemoIcon />
+              Left icon
+            </div>
+          </Button>
+
+          <Button variant="outline" size="md">
+            <div className="flex items-center gap-2.5 leading-[1.4]">
+              Right icon
+              <DemoIcon />
+            </div>
+          </Button>
+
+          <Button classes="bg-transparent" size="md">
+            <div className="flex items-center gap-2.5 leading-[1.4]">
+              <DemoIcon />
+            </div>
+          </Button>
+        </div>
+        <div className="flex gap-5">
+          <Button variant="link" element="a" href="https://www.youtube.com/@devbyshat" size="md">
+            Link
+          </Button>
+
+          <Button variant="link" element="a" href="https://www.github.com/shatlyk1011" isExternal size="md">
+            <div className="flex items-center gap-2.5 leading-[1.4]">
+              <DemoIcon className="h-4 w-4" />
+              External
+            </div>
+          </Button>
+          <Button classes="bg-pink-500 hover:bg-pink-600 px-4 py-2 text-sm trackin-wide rounded-full" size="md">
+            With Custom Styles
+          </Button>
+        </div>
+      </div>
+    </section>
   )
 }
