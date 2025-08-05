@@ -43,6 +43,7 @@ const ContentWrapper = ({ children }: { children: ReactNode }) => (
 )
 
 const Button: FC<Props> = ({ variant = "primary", size = "lg", classes, element, children, ...rest }) => {
+
   const className = cn(
     "relative max-h-max leading-[0] inline-flex items-center font-semibold text-nowrap transition",
     buttonSizes[size],
@@ -64,7 +65,6 @@ const Button: FC<Props> = ({ variant = "primary", size = "lg", classes, element,
     )
   }
 
-  // Default: button
   const buttonProps = rest as ButtonProps
   return (
     <button {...buttonProps} type="button" className={className}>

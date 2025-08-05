@@ -15,7 +15,7 @@ const DemoIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
 export default function ReusableButton() {
   return (
     <>
-      <div className="flex min-h-svh w-full flex-col items-center justify-start">
+      <section className="flex min-h-svh w-full flex-col items-center justify-start">
         <h1 className="mb-10 inline-block text-2xl font-semibold tracking-tight">
           Reusable Button Component in action
         </h1>
@@ -81,7 +81,7 @@ export default function ReusableButton() {
             </Button>
           </div>
         </div>
-      </div>
+      </section>
     </>
   )
 }
