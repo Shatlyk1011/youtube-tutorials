@@ -16,9 +16,7 @@ const DemoIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
 export default function ReusableButton() {
   return (
     <section className="flex min-h-svh w-full flex-col items-center justify-start">
-      <h1 className="mb-10 inline-block text-2xl font-semibold tracking-tight">
-        Reusable Button Component in action
-      </h1>
+      <h1 className="mb-10 inline-block text-2xl font-semibold tracking-tight">Reusable Button Component in action</h1>
       <div className="flex flex-col items-start gap-5">
         <div className="flex gap-5">
           <Button variant="primary">Primary lg</Button>
@@ -79,6 +77,14 @@ export default function ReusableButton() {
           </Button>
         </div>
       </div>
+      <Button
+        variant="link"
+        href="https://www.youtube.com/watch?v=_-G7VTWqMfc"
+        element="a"
+        classes="bg-red-500 mt-20 text-white rounded-full px-6 text-base"
+      >
+        Watch Youtube Tutorial
+      </Button>
     </section>
   )
 }
