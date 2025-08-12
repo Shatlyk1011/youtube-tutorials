@@ -27,8 +27,6 @@ export default function RootLayout({
             <li className="">
               <Link href={"/reusable-button"}>Reusable-button</Link>
             </li>
-            {/* <li></li> */}
-            {/* <li></li> */}
           </ul>
         </div>
         {children}
